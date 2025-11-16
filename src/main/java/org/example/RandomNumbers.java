@@ -4,18 +4,24 @@ import lombok.Data;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 public class RandomNumbers {
     private SecureRandom secureRandom = new SecureRandom();
-    private ArrayList<Integer> arrayOfRandomNumbers = new ArrayList<>();
 
 
     public ArrayList<Integer> addRandomNumbersToList() {
+        ArrayList<Integer> randomNumbersList = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             int randomNumber = secureRandom.nextInt(99) + 1;
-            arrayOfRandomNumbers.add(randomNumber);
+            if (randomNumbersList.contains(randomNumber)){
+                i--;
+            } else {
+                randomNumbersList.add(randomNumber);
+            }
         }
-        return arrayOfRandomNumbers;
+        return randomNumbersList;
     }
 }

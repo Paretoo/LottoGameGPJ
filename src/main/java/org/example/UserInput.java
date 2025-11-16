@@ -17,9 +17,14 @@ public class UserInput {
             System.out.print("Please type a number from 1 to 99: ");
             try {
                 int selectedNumber = sc.nextInt();
-                if (selectedNumber >= 1 && selectedNumber <= 99)
-                    userNumbers.add(selectedNumber);
-                else {
+                if (selectedNumber >= 1 && selectedNumber <= 99) {
+                    if (userNumbers.contains(selectedNumber)) {
+                        System.out.println("This number has been already entered!");
+                        i--;
+                    } else {
+                        userNumbers.add(selectedNumber);
+                    }
+                } else {
                     System.out.println("The number is not in range. Try again!");
                     i--;
                 }
@@ -33,6 +38,7 @@ public class UserInput {
         return userNumbers;
     }
 
+    // Temporary method for testing
     public void printUserNumbers() {
         System.out.println(userNumbers);
     }
