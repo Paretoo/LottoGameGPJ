@@ -12,7 +12,7 @@ class RandomNumbersTest {
     private RandomNumbers randomNumbers;
     private List<Integer> result;
 
-    @BeforeEach
+
     void setUp(){
         randomNumbers = new RandomNumbers();
         result = randomNumbers.addRandomNumbersToList();
@@ -20,14 +20,22 @@ class RandomNumbersTest {
 
     @Test
     void shouldGenerateSixNumbersInArray(){
+        setUp();
         assertEquals(6, result.size());
     }
 
     @Test
     void shouldGenerateNumbersInRange(){
+        setUp();
         for(int number : result){
             assertTrue(number >= 1 && number <= 99);
         }
+    }
+
+    @Test
+    void shouldReturnArrayListWithSixNumbersEvenWhenNumbersAreDuplicated(){
+        randomNumbers = new RandomNumbers();
+
     }
 
 }

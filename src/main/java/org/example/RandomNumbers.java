@@ -4,8 +4,6 @@ import lombok.Data;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
 
 @Data
 public class RandomNumbers {
