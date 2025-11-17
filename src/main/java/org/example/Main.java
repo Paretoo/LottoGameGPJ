@@ -1,8 +1,11 @@
 package org.example;
 
+import java.security.SecureRandom;
+
 public class Main {
     public static void main(String[] args) {
-        RandomNumbers randomNumbers = new RandomNumbers();
+        SecureRandom random = new SecureRandom();
+        RandomNumbers randomNumbers = new RandomNumbers(random);
 
 
         System.out.println(randomNumbers.addRandomNumbersToList());

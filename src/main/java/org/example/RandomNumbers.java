@@ -4,11 +4,15 @@ import lombok.Data;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Random;
 
 @Data
 public class RandomNumbers {
-    private SecureRandom secureRandom = new SecureRandom();
+    private final Random secureRandom;
 
+    public RandomNumbers(Random secureRandom) {
+        this.secureRandom = secureRandom;
+    }
 
     public ArrayList<Integer> addRandomNumbersToList() {
         ArrayList<Integer> randomNumbersList = new ArrayList<>();
