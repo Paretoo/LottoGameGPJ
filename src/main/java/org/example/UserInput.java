@@ -8,8 +8,12 @@ import java.util.Scanner;
 
 @Data
 public class UserInput {
-    private Scanner sc = new Scanner(System.in);
+    private Scanner sc;
     private ArrayList<Integer> userNumbers = new ArrayList<>();
+
+    public UserInput(Scanner sc) {
+        this.sc = sc;
+    }
 
     public ArrayList<Integer> getNumbersFromUser() {
         System.out.println("Welcome to Lotto! Please type 6 numbers and try your luck!");

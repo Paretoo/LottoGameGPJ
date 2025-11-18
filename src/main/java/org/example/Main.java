@@ -1,21 +1,24 @@
 package org.example;
 
 import java.security.SecureRandom;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         SecureRandom random = new SecureRandom();
-        RandomNumbers randomNumbers = new RandomNumbers(random);
+        Scanner sc = new Scanner(System.in);
 
-
-        System.out.println(randomNumbers.addRandomNumbersToList());
-
-
-
-//        UserInput userInput = new UserInput();
+//        RandomNumbers randomNumbers = new RandomNumbers(random);
 //
-//        userInput.getNumbersFromUser();
-//        userInput.printUserNumbers();
+//
+//        System.out.println(randomNumbers.addRandomNumbersToList());
+
+
+
+        UserInput userInput = new UserInput(sc);
+
+        userInput.getNumbersFromUser();
+        userInput.printUserNumbers();
 
     }
 }
