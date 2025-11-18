@@ -10,9 +10,6 @@ import java.util.Random;
 public class RandomNumbers {
     private final Random secureRandom;
 
-    public RandomNumbers(Random secureRandom) {
-        this.secureRandom = secureRandom;
-    }
 
     public ArrayList<Integer> addRandomNumbersToList() {
         ArrayList<Integer> randomNumbersList = new ArrayList<>();
