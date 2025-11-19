@@ -8,17 +8,11 @@ public class Main {
         SecureRandom random = new SecureRandom();
         Scanner sc = new Scanner(System.in);
 
-//        RandomNumbers randomNumbers = new RandomNumbers(random);
-//
-//
-//        System.out.println(randomNumbers.addRandomNumbersToList());
-
-
-
+        RandomNumbers randomNumbers = new RandomNumbers(random);
         UserInput userInput = new UserInput(sc);
 
-        userInput.getNumbersFromUser();
-        userInput.printUserNumbers();
+
+
 
     }
 }
