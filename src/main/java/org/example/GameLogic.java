@@ -13,8 +13,14 @@ public class GameLogic {
     private ArrayList<Integer> drawnNumbers;
 
     public void checkResults(){
-        System.out.println("You entered numbers: ");
-        System.out.println();
+        System.out.println("Typed numbers: " + enteredNumbers);
+        System.out.println("Drawn numbers: " + drawnNumbers);
+
+        Set<Integer> correctNumbers = new HashSet<>(enteredNumbers);
+        correctNumbers.retainAll(drawnNumbers);
+
+        System.out.println("You hit: " + correctNumbers.size());
+
     }
 
 }
