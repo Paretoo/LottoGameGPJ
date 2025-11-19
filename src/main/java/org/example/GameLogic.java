@@ -9,8 +9,8 @@ import java.util.Set;
 
 @Data
 public class GameLogic {
-    private ArrayList<Integer> enteredNumbers;
-    private ArrayList<Integer> drawnNumbers;
+    private final ArrayList<Integer> enteredNumbers;
+    private final ArrayList<Integer> drawnNumbers;
 
     public void checkResults(){
         System.out.println("Typed numbers: " + enteredNumbers);
@@ -19,7 +19,19 @@ public class GameLogic {
         Set<Integer> correctNumbers = new HashSet<>(enteredNumbers);
         correctNumbers.retainAll(drawnNumbers);
 
-        System.out.println("You hit: " + correctNumbers.size());
+        if(correctNumbers.size() < 3){
+            System.out.println("********************");
+            System.out.println("You hit: " + correctNumbers.size() + " " + correctNumbers);
+            System.out.println("You didn't win the price :(");
+            System.out.println("********************");
+        } else {
+            System.out.println("********************");
+            System.out.println("You hit: " + correctNumbers.size() + " " + correctNumbers);
+            System.out.println("You won a prize! :)");
+            System.out.println("********************");
+        }
+
+
 
     }
 
