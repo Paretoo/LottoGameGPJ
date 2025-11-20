@@ -7,6 +7,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        gameStart();
+    }
+
+    private static void gameStart(){
+
         SecureRandom random = new SecureRandom();
         Scanner sc = new Scanner(System.in);
         UserInput userInput = new UserInput(sc);
