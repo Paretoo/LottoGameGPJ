@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.junit.jupiter.api.Test;
+import org.lotto.RandomNumbers;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -17,7 +18,6 @@ class RandomNumbersTest {
     private Random secureRandom;
     private RandomNumbers randomNumbers;
     private List<Integer> result;
-
 
     void setUp() {
         secureRandom = new SecureRandom();
@@ -43,15 +43,10 @@ class RandomNumbersTest {
     void shouldIgnoreDuplicateValues() {
 
         Random mockRandom = mock(Random.class);
-
         when(mockRandom.nextInt(99))
                 .thenReturn(5, 5, 10, 15, 20, 15, 25, 40);
-
         RandomNumbers randNumbers = new RandomNumbers(mockRandom);
         ArrayList<Integer> result = randNumbers.addRandomNumbersToList();
-
         assertEquals(6, result.size());
     }
-
-
 }

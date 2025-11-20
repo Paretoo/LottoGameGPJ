@@ -1,4 +1,4 @@
-package org.example;
+package org.lotto;
 
 import lombok.Data;
 
@@ -28,7 +28,6 @@ public class UserInput {
                     System.out.println("The number is not in range. Try again!");
                     i--;
                 }
-
             } catch (InputMismatchException e) {
                 System.out.println("You entered text, please enter a number!");
                 sc.nextLine();
@@ -36,10 +35,5 @@ public class UserInput {
             }
         }
         return userNumbers;
-    }
-
-    // Temporary method for testing
-    public void printUserNumbers() {
-        System.out.println(userNumbers);
     }
 }

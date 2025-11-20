@@ -1,4 +1,4 @@
-package org.example;
+package org.lotto;
 
 import lombok.Data;
 
@@ -10,12 +10,11 @@ import java.util.Random;
 public class RandomNumbers {
     private final Random secureRandom;
 
-
     public ArrayList<Integer> addRandomNumbersToList() {
         ArrayList<Integer> randomNumbersList = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
             int randomNumber = secureRandom.nextInt(99) + 1;
-            if (randomNumbersList.contains(randomNumber)){
+            if (randomNumbersList.contains(randomNumber)) {
                 i--;
             } else {
                 randomNumbersList.add(randomNumber);
