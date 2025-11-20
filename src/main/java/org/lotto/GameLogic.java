@@ -9,6 +9,7 @@ import java.util.Set;
 
 @Data
 public class GameLogic {
+
     private final ArrayList<Integer> enteredNumbers;
     private final ArrayList<Integer> drawnNumbers;
 

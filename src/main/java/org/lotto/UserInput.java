@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 @Data
 public class UserInput {
+
     private final Scanner sc;
     private ArrayList<Integer> userNumbers = new ArrayList<>();
 

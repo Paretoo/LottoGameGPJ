@@ -8,6 +8,7 @@ import java.util.Random;
 
 @Data
 public class RandomNumbers {
+
     private final Random secureRandom;
 
     public ArrayList<Integer> addRandomNumbersToList() {
